@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="HarvestingTool" load_steps=3 format=3 uid="uid://csfwesmh80no3"]
+
+[ext_resource type="Script" path="res://Items/HarvestingTool.gd" id="1_eqfh4"]
+[ext_resource type="Texture2D" uid="uid://d1gf63dn70ukq" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Egg_BSpot item.png" id="2_jbfva"]
+
+[resource]
+script = ExtResource("1_eqfh4")
+min_amount = 1
+max_amount = 1
+effected_types = Array[Resource("res://Objects/Resources/Types/resource_node_type.gd")]([])
+display_name = "Blue Spotted Egg"
+texture = ExtResource("2_jbfva")

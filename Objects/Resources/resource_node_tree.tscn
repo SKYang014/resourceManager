@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://db8lng6poyabu"]
+
+[ext_resource type="Texture2D" uid="uid://bmuftyk46lo6r" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="1_ggteh"]
+[ext_resource type="Script" path="res://Objects/Resources/ResourceNode.gd" id="1_luqt5"]
+[ext_resource type="Resource" uid="uid://3f7pscwfjj3b" path="res://Objects/Resources/Types/woodtype.tres" id="2_p0mut"]
+[ext_resource type="PackedScene" uid="uid://d10s8abgphtjx" path="res://Objects/Pickups/pickup_wood.tscn" id="3_7ow1x"]
+[ext_resource type="PackedScene" uid="uid://co287qu5r5kkb" path="res://Effects/depleted_resources_explosion.tscn" id="4_l3fla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_weshk"]
+size = Vector2(6, 9)
+
+[node name="ResourceNode_Tree" type="StaticBody2D"]
+script = ExtResource("1_luqt5")
+node_types = Array[Resource("res://Objects/Resources/Types/resource_node_type.gd")]([ExtResource("2_p0mut")])
+starting_resources = 5
+pickup_type = ExtResource("3_7ow1x")
+depleted_effect = ExtResource("4_l3fla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_weshk")
+
+[node name="Tree_Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ggteh")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 32)

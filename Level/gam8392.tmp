@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhhpfx4c8rjqd"]
+
+[ext_resource type="PackedScene" uid="uid://emaedhebeoa8" path="res://Characters/player.tscn" id="1_0af0t"]
+[ext_resource type="Texture2D" uid="uid://bky4icwyfxorq" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Egg item.png" id="2_v3go4"]
+[ext_resource type="PackedScene" uid="uid://dn6adgb7lvroe" path="res://Resources/chicken_coop.tscn" id="3_cc854"]
+[ext_resource type="PackedScene" uid="uid://db8lng6poyabu" path="res://Objects/Resources/resource_node_tree.tscn" id="4_7imd6"]
+[ext_resource type="PackedScene" uid="uid://btks8q6phi8o4" path="res://UI/resource_display.tscn" id="5_rh3oj"]
+
+[node name="GameLevel" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_0af0t")]
+position = Vector2(25, 24)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="EggItem" type="Sprite2D" parent="."]
+position = Vector2(140, 27)
+texture = ExtResource("2_v3go4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(25, 24)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="ChickenCoop" parent="." instance=ExtResource("3_cc854")]
+position = Vector2(91, 27)
+
+[node name="ChickenCoop2" parent="." instance=ExtResource("3_cc854")]
+position = Vector2(-53, 6)
+
+[node name="ChickenCoop3" parent="." instance=ExtResource("3_cc854")]
+position = Vector2(48, -31)
+
+[node name="ResourceNode_Tree" parent="." instance=ExtResource("4_7imd6")]
+position = Vector2(54, 14)
+
+[node name="ResourceNode_Tree2" parent="." instance=ExtResource("4_7imd6")]
+position = Vector2(-16, 30)
+
+[node name="ResourceNode_Tree3" parent="." instance=ExtResource("4_7imd6")]
+position = Vector2(-16, -33)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("5_rh3oj")]

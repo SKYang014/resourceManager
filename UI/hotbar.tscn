@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6vve3w2e54ix"]
+
+[ext_resource type="Script" path="res://UI/hotbar.gd" id="1_6ouxe"]
+[ext_resource type="PackedScene" uid="uid://c526acdgqfeva" path="res://item_button.tscn" id="2_3cf2o"]
+[ext_resource type="Texture2D" uid="uid://cfdw6pxgttrjp" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Hoe item.png" id="2_vopih"]
+[ext_resource type="Resource" uid="uid://db6hb4pk8xjsq" path="res://Items/axe.tres" id="3_0rlwd"]
+[ext_resource type="Resource" uid="uid://jikity7rgecg" path="res://Items/pickaxe.tres" id="4_i353v"]
+[ext_resource type="Texture2D" uid="uid://d1gf63dn70ukq" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Egg_BSpot item.png" id="4_kufo7"]
+[ext_resource type="Resource" uid="uid://csfwesmh80no3" path="res://Items/egg_spotted_blue.tres" id="7_27aem"]
+
+[node name="Hotbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ouxe")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -25.0
+offset_right = 40.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+columns = 10
+
+[node name="ItemButton" parent="GridContainer" instance=ExtResource("2_3cf2o")]
+layout_mode = 2
+item = ExtResource("3_0rlwd")
+
+[node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_3cf2o")]
+layout_mode = 2
+icon = ExtResource("2_vopih")
+item = ExtResource("4_i353v")
+
+[node name="ItemButton4" parent="GridContainer" instance=ExtResource("2_3cf2o")]
+layout_mode = 2
+icon = ExtResource("4_kufo7")
+item = ExtResource("7_27aem")

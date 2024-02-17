@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://co287qu5r5kkb"]
+
+[ext_resource type="Script" path="res://Effects/depleted_resources_explosion.gd" id="1_0lqu1"]
+
+[sub_resource type="Gradient" id="Gradient_f5oia"]
+colors = PackedColorArray(0.926606, 0.926606, 0.926606, 1, 0.92549, 0.92549, 0.92549, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1y1uq"]
+gradient = SubResource("Gradient_f5oia")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1pyu7"]
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 50, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 50.0
+damping_max = 50.0
+scale_min = 2.0
+scale_max = 3.0
+color_ramp = SubResource("GradientTexture1D_1y1uq")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xwvb0"]
+
+[node name="DepletedResourcesExplosion" type="GPUParticles2D"]
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_1pyu7")
+texture = SubResource("CanvasTexture_xwvb0")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("1_0lqu1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

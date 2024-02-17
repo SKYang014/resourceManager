@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d10s8abgphtjx"]
+
+[ext_resource type="Script" path="res://Objects/Pickups/pickup.gd" id="1_5soe0"]
+[ext_resource type="Resource" uid="uid://cna642scva80w" path="res://Items/Resources/resourceWood.tres" id="2_4mcdr"]
+[ext_resource type="Texture2D" uid="uid://b8jtly3f2bpp8" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Branch item.png" id="2_m8xtj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xel5o"]
+size = Vector2(13, 14)
+
+[node name="Pickup_wood" type="Area2D"]
+z_index = -5
+script = ExtResource("1_5soe0")
+resource_type = ExtResource("2_4mcdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xel5o")
+
+[node name="BranchItem" type="Sprite2D" parent="."]
+texture = ExtResource("2_m8xtj")

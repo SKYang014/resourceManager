@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2p73d6apt1io"]
+
+[ext_resource type="Script" path="res://Objects/Pickups/pickup.gd" id="1_j20to"]
+[ext_resource type="Resource" uid="uid://dkvhc1e6fe4k2" path="res://Items/Resources/resourceEgg.tres" id="2_x5sk8"]
+[ext_resource type="Texture2D" uid="uid://bky4icwyfxorq" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Egg item.png" id="3_xtto0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xel5o"]
+size = Vector2(13, 14)
+
+[node name="Pickup_egg" type="Area2D"]
+z_index = -5
+script = ExtResource("1_j20to")
+resource_type = ExtResource("2_x5sk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xel5o")
+
+[node name="BranchItem" type="Sprite2D" parent="."]
+texture = ExtResource("3_xtto0")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm70gbogh8kfa"]
+
+[ext_resource type="Script" path="res://Objects/Resources/ResourceNode.gd" id="1_t2m4r"]
+[ext_resource type="Resource" uid="uid://b3a857oi4xo21" path="res://Objects/Resources/Types/stonetype.tres" id="2_woejs"]
+[ext_resource type="PackedScene" uid="uid://cejevb2pxbs2o" path="res://Objects/Pickups/pickup_stone.tscn" id="3_k3h6k"]
+[ext_resource type="Texture2D" uid="uid://bmuftyk46lo6r" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="4_8muk8"]
+[ext_resource type="PackedScene" uid="uid://co287qu5r5kkb" path="res://Effects/depleted_resources_explosion.tscn" id="4_k6emd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2q8sn"]
+radius = 5.09902
+
+[node name="ResourceNode_Rock" type="StaticBody2D"]
+script = ExtResource("1_t2m4r")
+node_types = Array[Resource("res://Objects/Resources/Types/resource_node_type.gd")]([ExtResource("2_woejs")])
+starting_resources = 5
+pickup_type = ExtResource("3_k3h6k")
+depleted_effect = ExtResource("4_k6emd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2q8sn")
+
+[node name="Tree_Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("4_8muk8")
+region_enabled = true
+region_rect = Rect2(128, 16, 16, 16)

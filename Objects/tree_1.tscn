@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm7yapkqrlxn1"]
+
+[ext_resource type="Texture2D" uid="uid://bmuftyk46lo6r" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="1_40htl"]
+
+[node name="Tree" type="Sprite2D"]
+position = Vector2(49, 39)
+texture = ExtResource("1_40htl")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 32)

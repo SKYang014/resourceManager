@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw448e3mhb37r"]
+
+[ext_resource type="Script" path="res://UI/ResourceItemDisplay.gd" id="1_nsae6"]
+[ext_resource type="Texture2D" uid="uid://b8jtly3f2bpp8" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Branch item.png" id="2_nlf71"]
+
+[node name="ResourceItemDisplay" type="HFlowContainer"]
+custom_minimum_size = Vector2(30, 0)
+offset_right = 28.0
+offset_bottom = 16.0
+script = ExtResource("1_nsae6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_nlf71")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2

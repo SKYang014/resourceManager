@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceItem" load_steps=3 format=3 uid="uid://dkvhc1e6fe4k2"]
+
+[ext_resource type="Script" path="res://Items/Resources/resource_item.gd" id="1_i3joq"]
+[ext_resource type="Texture2D" uid="uid://bky4icwyfxorq" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Egg item.png" id="2_h5nxf"]
+
+[resource]
+resource_name = "Egg"
+script = ExtResource("1_i3joq")
+display_name = "Egg"
+texture = ExtResource("2_h5nxf")

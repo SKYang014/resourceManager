@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn6adgb7lvroe"]
+
+[ext_resource type="Texture2D" uid="uid://cxh0rsm3giiw" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Free_Chicken_House.png" id="1_t0ks6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d275l"]
+size = Vector2(30, 23)
+
+[node name="ChickenCoop" type="StaticBody2D"]
+
+[node name="ChickenCoopSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_t0ks6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_d275l")

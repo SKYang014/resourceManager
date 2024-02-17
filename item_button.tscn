@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c526acdgqfeva"]
+
+[ext_resource type="Texture2D" uid="uid://8in5eqfi32fr" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Axe item.png" id="1_c2hv0"]
+[ext_resource type="Script" path="res://UI/ItemButton.gd" id="2_yr5nj"]
+
+[node name="ItemButton" type="Button"]
+icon = ExtResource("1_c2hv0")
+script = ExtResource("2_yr5nj")

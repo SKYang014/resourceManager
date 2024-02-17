@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cejevb2pxbs2o"]
+
+[ext_resource type="Script" path="res://Objects/Pickups/pickup.gd" id="1_lf2rl"]
+[ext_resource type="Resource" uid="uid://crp6emu7vgiai" path="res://Items/Resources/resourceStone.tres" id="2_v1hpm"]
+[ext_resource type="Texture2D" uid="uid://ca6pfv6wh756p" path="res://art/Sprout Lands - Sprites - Basic pack/Objects/Stone item.png" id="3_d0ioi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xel5o"]
+size = Vector2(13, 14)
+
+[node name="Pickup_stone" type="Area2D"]
+z_index = -5
+script = ExtResource("1_lf2rl")
+resource_type = ExtResource("2_v1hpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xel5o")
+
+[node name="BranchItem" type="Sprite2D" parent="."]
+texture = ExtResource("3_d0ioi")
